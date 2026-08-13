@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>法國巴黎親子自由行｜公開版行程</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow mono">FRANCE FAMILY ITINERARY</p>
+      <h1>法國巴黎親子自由行</h1>
+      <p class="sub">6 日公開版行程：巴黎經典地標、博物館、近郊小旅行與親子友善節奏。</p>
+      <div class="hero-tags">
+        <span>Paris</span><span>Family Trip</span><span>GitHub Pages</span><span class="strong">Public Version</span>
+      </div>
+    </div>
+    <svg class="skyline" viewBox="0 0 920 210" role="img" aria-label="Paris skyline illustration">
+      <path d="M0 185h920" stroke="rgba(255,255,255,.35)" stroke-width="2"/>
+      <path d="M105 185l48-132 48 132M128 125h50M115 160h76" fill="none" stroke="#f5efe7" stroke-width="5" stroke-linecap="round"/>
+      <path d="M335 185V90h120v95M352 90c10-35 85-35 96 0" fill="none" stroke="#f5efe7" stroke-width="5"/>
+      <path d="M620 185c12-55 54-88 105-88s93 33 105 88" fill="none" stroke="#f5efe7" stroke-width="5"/>
+      <circle cx="770" cy="58" r="22" fill="rgba(225,188,113,.85)"/>
+    </svg>
+  </header>
+
+  <section class="info-strip">
+    <div><span>來源</span><strong>Travel plan / france tab</strong></div>
+    <div><span>版本</span><strong>公開版，已移除私密資訊</strong></div>
+    <div><span>用途</span><strong>手機閱讀、分享、列印</strong></div>
+  </section>
+
+  <main>
+    <section class="privacy-note">
+      <h2>公開資訊提醒</h2>
+      <p>此頁面只放行程摘要、景點、交通建議、預算區間與公開 Google Maps 連結；不包含訂房確認碼、PNR、電話、Email、護照、付款資訊或完整私人住宿地址。</p>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="mono">01</span><h2>每日行程</h2></div>
+      <div id="timeline" class="timeline" aria-live="polite"></div>
+    </section>
+
+    <section>
+      <div class="section-head"><span class="mono">02</span><h2>訂票與預約提醒</h2></div>
+      <div id="booking-list" class="booking-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Generated as a static GitHub Pages itinerary. Last updated from public-safe data.</p>
+  </footer>
+
+  <script>
+    const escapeHtml = (s = '') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+    fetch('itinerary.json')
+      .then(r => r.json())
+      .then(data => {
+        document.title = `${data.title}｜公開版行程`;
+        const timeline = document.querySelector('#timeline');
+        timeline.innerHTML = data.days.map(day => `
+          <article class="day-card">
+            <div class="day-dot mono">D${day.day}</div>
+            <div class="card-body">
+              <h3>${escapeHtml(day.title)}</h3>
+              ${day.theme ? `<p class="theme">${escapeHtml(day.theme).replace(/\n/g, '<br>')}</p>` : ''}
+              <div class="items">
+                ${day.items.map(item => `
+                  <div class="item">
+                    <div class="time mono">${escapeHtml(item.time)}</div>
+                    <div class="item-main">
+                      <h4>${escapeHtml(item.name)}</h4>
+                      ${item.summary ? `<p>${escapeHtml(item.summary)}</p>` : ''}
+                      <div class="meta">
+                        ${item.transport ? `<span>🚇 ${escapeHtml(item.transport)}</span>` : ''}
+                        ${item.booking ? `<span>🎟️ ${escapeHtml(item.booking)}</span>` : ''}
+                        ${item.budget ? `<span>💶 ${escapeHtml(item.budget)}</span>` : ''}
+                        ${item.food ? `<span>🥐 ${escapeHtml(item.food)}</span>` : ''}
+                        ${item.map ? `<a href="${escapeHtml(item.map)}" target="_blank" rel="noopener">Google Maps</a>` : ''}
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </article>
+        `).join('');
+
+        const bookings = [];
+        data.days.forEach(day => day.items.forEach(item => {
+          if (item.booking) bookings.push({day: day.day, title: item.name, booking: item.booking});
+        }));
+        document.querySelector('#booking-list').innerHTML = bookings.map(b => `
+          <div class="booking-card"><span class="mono">DAY ${b.day}</span><strong>${escapeHtml(b.title)}</strong><p>${escapeHtml(b.booking)}</p></div>
+        `).join('');
+      })
+      .catch(err => {
+        document.querySelector('#timeline').innerHTML = `<p class="error">無法載入 itinerary.json：${escapeHtml(err.message)}</p>`;
+      });
+  </script>
+</body>
+</html>

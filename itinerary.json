@@ -1,0 +1,350 @@
+{
+   "days" : [
+      {
+         "day" : 1,
+         "items" : [
+            {
+               "booking" : "è¨ç¥¨/è¨ä½",
+               "budget" : "é ç®(â¬)",
+               "food" : "å¿å/å¿é»",
+               "map" : "Google Maps",
+               "name" : "è¡ç¨å§å®¹",
+               "summary" : "æ´»åæè¦èå»ºè­°",
+               "time" : "æé",
+               "transport" : "äº¤éèæ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Paris",
+               "name" : "æµéå·´é» / Check-in",
+               "summary" : "è¥æ©å°ï¼åå¯æ¾è¡æï¼hotel luggage storageï¼ãå»ºè­°è²· Navigo Easy / æç¨ Apple Pay é²ç«ï¼çä½ ææ©æ¯æ´ï¼ã",
+               "time" : "ä¸å",
+               "transport" : "æ©å ´âå¸åï¼RER B(å¸¸è¦) / Taxi / Uber"
+            },
+            {
+               "booking" : "Eiffel Tower timed ticketï¼å¼·çå»ºè­°ï¼",
+               "budget" : "2A+1C â â¬45ââ¬90ï¼è¦ä¸å¡æ¨å±¤/é»æ¢¯ï¼",
+               "food" : "å¯éºé¤",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Eiffel%20Tower",
+               "name" : "è¾è²ç¾éµå¡ï¼Champ de Marsï¼",
+               "summary" : "èµ°å°æ°ç¥å»£å ´ææ­£é¢ï¼è¥è¦ç»å¡è«æåè¨ç¥¨ã",
+               "time" : "ä¸å 15:00",
+               "transport" : "å°éµï¼Bir-Hakeim / TrocadÃ©ro"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Trocad%C3%A9ro",
+               "name" : "ç¹ç¾å¡å¾·ç¾ TrocadÃ©ro",
+               "summary" : "æéµå¡å¤é½èå¤æ¯é»çï¼æ´é»éçï¼ã",
+               "time" : "åæ 17:30",
+               "transport" : "æ­¥è¡ 10â15 åé"
+            },
+            {
+               "booking" : "å¯ç¾å ´è²·ï¼ä½æºå­£å»ºè­°ç·ä¸",
+               "budget" : "2A+1C â â¬40ââ¬70ï¼ä¾è¹å¬å¸/ææ®µï¼",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Bateaux%20Mouches",
+               "name" : "å¡ç´æ²³éè¹ï¼Bateaux Mouchesï¼",
+               "summary" : "ç¬¬ä¸æ¬¡ä¾å¾å¼å¾ï¼é¸æ¥è½å¾ 30â60 åéä¸è¹æå¥½çã",
+               "time" : "æä¸ 20:00",
+               "transport" : "å°éµï¼Alma-Marceau / Pont de l'Alma"
+            }
+         ],
+         "theme" : "",
+         "title" : "å·´é»ï¼éµå¡ & å¡ç´æ²³ç¶å¸éå ´"
+      },
+      {
+         "day" : 2,
+         "items" : [
+            {
+               "booking" : "è¨ç¥¨/è¨ä½",
+               "budget" : "",
+               "food" : "å¿å/å¿é»",
+               "map" : "Google Maps",
+               "name" : "è¡ç¨å§å®¹",
+               "summary" : "æ´»åæè¦èå»ºè­°",
+               "time" : "æé",
+               "transport" : "äº¤éèæ­¥è¡"
+            },
+            {
+               "booking" : "Louvre timed entryï¼å¿è¨ï¼",
+               "budget" : "2A â â¬44ï¼C(10) â¬0*",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Louvre%20Museum",
+               "name" : "ç¾æµ®å®® Louvre",
+               "summary" : "åéå® 3â5 åé¤¨åï¼å¤ªå¤§éä¸å®ï¼ï¼èå¨éºè/åå©å¥³ç¥/æ¿ç ´å´å»³ã",
+               "time" : "ä¸å 09:00",
+               "transport" : "å°éµï¼Palais RoyalâMusÃ©e du Louvre"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Tuileries%20Garden",
+               "name" : "ææ¨éºè±å",
+               "summary" : "ç¾æµ®å®®åºä¾æ£æ­¥ä¼æ¯ãæç§ã",
+               "time" : "ä¸­å 12:30",
+               "transport" : "æ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Place%20de%20la%20Concorde",
+               "name" : "ååå»£å ´âé¦æ¦­éºèå¤§éæ£æ­¥",
+               "summary" : "å¾ååä¸è·¯èµ°å°å±æéï¼å¯ä¸­éåå¡/è³¼ç©ï¼ã",
+               "time" : "ä¸å 14:00",
+               "transport" : "æ­¥è¡ 45â60 åéï¼å¯åæ®µæ­å°éµï¼"
+            },
+            {
+               "booking" : "Arc de Triomphe ticketï¼å»ºè­°ï¼",
+               "budget" : "2A â â¬32ï¼C(10) â¬0*",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Arc%20de%20Triomphe",
+               "name" : "å±æéï¼å¯ç»é ï¼",
+               "summary" : "æ¥è½åå¾ç»é çå·´é»æ¾å°çè¡æ¯è¶å¼å¾ã",
+               "time" : "åæ 18:00",
+               "transport" : "å°éµï¼Charles de GaulleâÃtoile"
+            }
+         ],
+         "theme" : "",
+         "title" : "å·´é»ï¼ç¾æµ®å®® + ææ¨éºè±å + ååå»£å ´"
+      },
+      {
+         "day" : 3,
+         "items" : [
+            {
+               "booking" : "è¨ç¥¨/è¨ä½",
+               "budget" : "",
+               "food" : "å¿å/å¿é»",
+               "map" : "Google Maps",
+               "name" : "è¡ç¨å§å®¹",
+               "summary" : "æ´»åæè¦èå»ºè­°",
+               "time" : "æé",
+               "transport" : "äº¤éèæ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Notre%20Dame%20de%20Paris",
+               "name" : "è¥¿å ¤å³¶ Ãle de la CitÃ©",
+               "summary" : "èµ°èæ¯é¢å¤è§ãå¡ç´æ²³æ©æ¯ã",
+               "time" : "ä¸å 09:30",
+               "transport" : "å°éµï¼CitÃ©"
+            },
+            {
+               "booking" : "Sainte-Chapelle timed ticketï¼å»ºè­°ï¼",
+               "budget" : "2A â â¬26ï¼C(10) â¬0*",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Sainte-Chapelle",
+               "name" : "èç¦®æå  Sainte-Chapelle",
+               "summary" : "å½©ç¹ªç»çå¿çï¼å»ºè­°æ©å»ã",
+               "time" : "ä¸å 11:00",
+               "transport" : "æ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "2A â â¬26ï¼C(10) â¬0*",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Panth%C3%A9on%20Paris",
+               "name" : "æä¸å/åè³¢ç¥  PanthÃ©on",
+               "summary" : "å¤§å­¸åæ°åå¾å¥½ï¼åå¡åºå¤ã",
+               "time" : "ä¸å 13:00",
+               "transport" : "æ­¥è¡/å°éµ"
+            },
+            {
+               "booking" : "æé¤å¯è¨ï¼ç±éåºï¼",
+               "budget" : "",
+               "food" : "å¯éºé²/é¦¬å¡é¾",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Le%20Marais%20Paris",
+               "name" : "çªé»å Le Marais",
+               "summary" : "éå°åºãçé»ãæé¤ï¼ä¹å¯é è·¯å»å­æ¥å»£å ´ã",
+               "time" : "åæ 17:00",
+               "transport" : "å°éµï¼Saint-Paul"
+            }
+         ],
+         "theme" : "",
+         "title" : "å·´é»ï¼è¥¿å ¤å³¶ & èæ¯é¢å¨é + æä¸å/çªé»"
+      },
+      {
+         "day" : 4,
+         "items" : [
+            {
+               "booking" : "è¨ç¥¨/è¨ä½",
+               "budget" : "",
+               "food" : "å¿å/å¿é»",
+               "map" : "Google Maps",
+               "name" : "è¡ç¨å§å®¹",
+               "summary" : "æ´»åæè¦èå»ºè­°",
+               "time" : "æé",
+               "transport" : "äº¤éèæ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Palace%20of%20Versailles",
+               "name" : "å·´é»âå¡ç¾è³½",
+               "summary" : "RER C ç´éï¼ä¾ä½ ä½å®¿å°é»èª¿æ´è·¯ç·ï¼ã",
+               "time" : "ä¸å 08:30",
+               "transport" : "è»ç¨ç´ 45â60 å"
+            },
+            {
+               "booking" : "Versailles Passport timed entryï¼å¿è¨ï¼",
+               "budget" : "2A â â¬42ââ¬64ï¼C(10) å¤æ¸åè²»*ï¼ç¹æ®å±/é³æ¨å´æ³å¦è¨ï¼",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Palace%20of%20Versailles",
+               "name" : "å¡ç¾è³½å®®ä¸»å®®",
+               "summary" : "é¡å»³ãåçå¥æ¿ï¼å»ºè­°ä¸ééå°±é²ã",
+               "time" : "ä¸å 10:00",
+               "transport" : "æ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Petit%20Trianon",
+               "name" : "è±å/ç¹éäºè¾²/çªéºå®æ±å°¼æè",
+               "summary" : "çä½ è³åï¼è±åè¶å¤§ï¼ç§é«ç¾å¤«è»/è³è¸è»å¯çåã",
+               "time" : "ä¸å",
+               "transport" : "ååå§æ­¥è¡å¾é·"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Paris",
+               "name" : "åå·´é»ä¼æ¯",
+               "summary" : "æé¤é¸é¢ä½å®¿è¿çå³å¯ã",
+               "time" : "æä¸",
+               "transport" : ""
+            }
+         ],
+         "theme" : "",
+         "title" : "è¿éï¼å¡ç¾è³½å®®ï¼æ´å¤©ï¼"
+      },
+      {
+         "day" : 5,
+         "items" : [
+            {
+               "booking" : "è¨ç¥¨/è¨ä½",
+               "budget" : "",
+               "food" : "å¿å/å¿é»",
+               "map" : "Google Maps",
+               "name" : "è¡ç¨å§å®¹",
+               "summary" : "æ´»åæè¦èå»ºè­°",
+               "time" : "æé",
+               "transport" : "äº¤éèæ­¥è¡"
+            },
+            {
+               "booking" : "Orsay ticketï¼å»ºè­°ï¼",
+               "budget" : "2A â â¬32ï¼C(10) â¬0*",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Mus%C3%A9e%20d%27Orsay",
+               "name" : "å¥§è³½ MusÃ©e d'Orsay",
+               "summary" : "è«å§/é·è«¾ç¦/æ¢µè°·ï¼ä¸å±¤å¤§éçªå¿æã",
+               "time" : "ä¸å 09:30",
+               "transport" : "å°éµï¼SolfÃ©rino"
+            },
+            {
+               "booking" : "ç±éåå¡åºå¯æé",
+               "budget" : "",
+               "food" : "ç±å·§åå/å¯é ",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Saint-Germain-des-Pr%C3%A9s",
+               "name" : "èæ¥è³æ¼ Saint-Germain",
+               "summary" : "éæ¸åºãåå¡é¤¨ï¼ä¹å¯å»è±ç¥/éåæå¡ã",
+               "time" : "ä¸å 14:00",
+               "transport" : "æ­¥è¡"
+            },
+            {
+               "booking" : "å»ºè­°ç·ä¸é ç´/ç¾å ´æé",
+               "budget" : "(Option) 2A â â¬20ââ¬28ï¼C(10) â¬0*",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Mus%C3%A9e%20de%20l%27Orangerie",
+               "name" : "å ç¢¼åç©é¤¨ï¼æ©å/ç¾ä¸¹ æä¸ï¼",
+               "summary" : "ä¸­ç­å¼·åº¦å ç¢¼ï¼æ©åçç¡è®/ç¾ä¸¹çéå¡ï¼è¡ç¨ä¸æå¤ªè¶ã",
+               "time" : "é¸é ",
+               "transport" : "å°éµ/æ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Galeries%20Lafayette%20Paris",
+               "name" : "èªç±æ´»å/è£æ¼",
+               "summary" : "ä½ æ³è£ï¼èä½çºç¾è²¨ãæ­åé¢ãæåçä¸æ¬¡éµå¡å¤æ¯ã",
+               "time" : "æä¸",
+               "transport" : ""
+            }
+         ],
+         "theme" : "",
+         "title" : "å·´é»ï¼å¥§è³½åç©é¤¨ + èæ¥è³æ¼/ç²¾ååå¡"
+      },
+      {
+         "day" : 6,
+         "items" : [
+            {
+               "booking" : "è¨ç¥¨/è¨ä½",
+               "budget" : "",
+               "food" : "å¿å/å¿é»",
+               "map" : "Google Maps",
+               "name" : "è¡ç¨å§å®¹",
+               "summary" : "æ´»åæè¦èå»ºè­°",
+               "time" : "æé",
+               "transport" : "äº¤éèæ­¥è¡"
+            },
+            {
+               "booking" : "è«å§è±åéç¥¨ï¼æºå­£å»ºè­°ï¼",
+               "budget" : "(Option) 2A â â¬22ââ¬26ï¼C(10) å¤æ¸åè²»/åªæ * + äº¤é",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Claude%20Monet%27s%20House%20and%20Gardens",
+               "name" : "å·´é»âåç¶­å°¼ Giverny",
+               "summary" : "ç«è»å° Vernon-Giverny åæ¥æ¥é§/è¨ç¨è»ã",
+               "time" : "é¸é  Aï½ä¸å",
+               "transport" : "è»ç¨ç´ 1â1.5 å°æ + æ¥é§"
+            },
+            {
+               "booking" : "",
+               "budget" : "(Option) 2A â â¬22ââ¬26ï¼C(10) å¤æ¸åè²»/åªæ * + äº¤é",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Giverny",
+               "name" : "è«å§è±å/å°é®æ£æ­¥",
+               "summary" : "ç¡è®æ± ãæ¥å¼æ©ï¼æç§å¾å¼·ã",
+               "time" : "é¸é  Aï½ä¸å",
+               "transport" : "æ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "(Option) ä¾è³¼ç©",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=Galeries%20Lafayette%20Haussmann",
+               "name" : "å·´é»æå¾æ¡è²·",
+               "summary" : "èä½çº/æ¥å¤©ç¾è²¨ï¼æåçªé»è²·ä¼´æç¦®ã",
+               "time" : "é¸é  Bï½å¨å¤©",
+               "transport" : "å°éµ/æ­¥è¡"
+            },
+            {
+               "booking" : "",
+               "budget" : "RER/Taxi/Uber ä¾åºç¼é»",
+               "food" : "",
+               "map" : "https://www.google.com/maps/search/?api=1&query=CDG%20Airport",
+               "name" : "åå¾æ©å ´/è»ç«",
+               "summary" : "é ç 2â3 å°æï¼åéç·æ´å¤ï¼ã",
+               "time" : "åæ",
+               "transport" : ""
+            }
+         ],
+         "theme" : "",
+         "title" : "è¿éäºé¸ä¸ï¼åç¶­å°¼ï¼è«å§è±åï¼/æ çå¨å·´é»æ¡è²·"
+      }
+   ],
+   "source" : "Travel plan / france tab",
+   "subtitle" : "Ã¥ÂÂ¬Ã©ÂÂÃ§ÂÂÃ¨Â¡ÂÃ§Â¨ÂÃ¯Â½ÂÃ¥Â·Â²Ã§Â§Â»Ã©ÂÂ¤Ã§Â§ÂÃ¥Â¯ÂÃ¨Â³ÂÃ¨Â¨Â",
+   "title" : "Ã¦Â³ÂÃ¥ÂÂÃ¥Â·Â´Ã©Â»ÂÃ¨Â¦ÂªÃ¥Â­ÂÃ¨ÂÂªÃ§ÂÂ±Ã¨Â¡Â",
+   "updated" : "2026-08-13"
+}
