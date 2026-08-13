@@ -58,7 +58,7 @@
   <script>
     const escapeHtml = (s = '') => String(s).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
-    fetch('itinerary.json')
+    fetch('itinerary.json?v=20260813-2119', { cache: 'no-store' })
       .then(r => r.json())
       .then(data => {
         document.title = `${data.title}｜公開版行程`;
