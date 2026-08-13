@@ -1,0 +1,31 @@
+name: Sensitive information scan
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Scan public files and decrypted website payload
+        env:
+          ITINERARY_PASSWORD: ${{ secrets.ITINERARY_PASSWORD }}
+          # Optional: add one sensitive token/reference per line in this secret.
+          # Examples: booking reference, ticket number, loyalty number, private address fragment.
+          SENSITIVE_TERMS: ${{ secrets.SENSITIVE_TERMS }}
+        run: node scripts/scan-sensitive.mjs

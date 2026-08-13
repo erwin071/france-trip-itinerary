@@ -95,3 +95,33 @@ ivantrip
 ```
 
 此 repo 內有 `scripts/encrypt-gcm.pl` 作為目前環境用的加密輔助腳本；它不包含密碼。
+
+## CI：敏感資訊掃描
+
+每次 push / pull request 都會跑 GitHub Actions：
+
+```text
+.github/workflows/sensitive-scan.yml
+```
+
+CI 會做兩件事：
+
+1. 掃描 public repo 檔案，確認沒有把密碼或明文行程細節 commit 進去。
+2. 用 GitHub Secret `ITINERARY_PASSWORD` 解密 `encrypted-data.json`，再掃描解密後的網站 payload，確認沒有 PNR、booking reference、ticket number、email、電話、護照、信用卡或私人 Google Docs/Sheets 連結等敏感資訊。
+
+需要在 GitHub repo 設定 secret：
+
+```text
+Settings → Secrets and variables → Actions → New repository secret
+Name: ITINERARY_PASSWORD
+Value: 行程解鎖密碼
+```
+
+可選擇再加一個 secret：
+
+```text
+Name: SENSITIVE_TERMS
+Value: 每行一個禁止出現在網站裡的敏感字串，例如 booking reference、ticket number、會員號碼等
+```
+
+注意：`SENSITIVE_TERMS` 不要 commit 到 repo，請只放 GitHub Secret。
