@@ -4,16 +4,6 @@
          "day" : 1,
          "items" : [
             {
-               "booking" : "\u8a02\u7968/\u8a02\u4f4d",
-               "budget" : "\u9810\u7b97(\u20ac)",
-               "food" : "\u5fc5\u5403/\u5fc5\u9ede",
-               "map" : "Google Maps",
-               "name" : "\u884c\u7a0b\u5167\u5bb9",
-               "summary" : "\u6d3b\u52d5\u6458\u8981\u8207\u5efa\u8b70",
-               "time" : "\u6642\u9593",
-               "transport" : "\u4ea4\u901a\u8207\u6b65\u884c"
-            },
-            {
                "booking" : "",
                "budget" : "",
                "food" : "",
@@ -60,16 +50,6 @@
       {
          "day" : 2,
          "items" : [
-            {
-               "booking" : "\u8a02\u7968/\u8a02\u4f4d",
-               "budget" : "",
-               "food" : "\u5fc5\u5403/\u5fc5\u9ede",
-               "map" : "Google Maps",
-               "name" : "\u884c\u7a0b\u5167\u5bb9",
-               "summary" : "\u6d3b\u52d5\u6458\u8981\u8207\u5efa\u8b70",
-               "time" : "\u6642\u9593",
-               "transport" : "\u4ea4\u901a\u8207\u6b65\u884c"
-            },
             {
                "booking" : "Louvre timed entry\uff08\u5fc5\u8a02\uff09",
                "budget" : "2A \u2248 \u20ac44\uff1bC(10) \u20ac0*",
@@ -118,16 +98,6 @@
          "day" : 3,
          "items" : [
             {
-               "booking" : "\u8a02\u7968/\u8a02\u4f4d",
-               "budget" : "",
-               "food" : "\u5fc5\u5403/\u5fc5\u9ede",
-               "map" : "Google Maps",
-               "name" : "\u884c\u7a0b\u5167\u5bb9",
-               "summary" : "\u6d3b\u52d5\u6458\u8981\u8207\u5efa\u8b70",
-               "time" : "\u6642\u9593",
-               "transport" : "\u4ea4\u901a\u8207\u6b65\u884c"
-            },
-            {
                "booking" : "",
                "budget" : "",
                "food" : "",
@@ -174,16 +144,6 @@
       {
          "day" : 4,
          "items" : [
-            {
-               "booking" : "\u8a02\u7968/\u8a02\u4f4d",
-               "budget" : "",
-               "food" : "\u5fc5\u5403/\u5fc5\u9ede",
-               "map" : "Google Maps",
-               "name" : "\u884c\u7a0b\u5167\u5bb9",
-               "summary" : "\u6d3b\u52d5\u6458\u8981\u8207\u5efa\u8b70",
-               "time" : "\u6642\u9593",
-               "transport" : "\u4ea4\u901a\u8207\u6b65\u884c"
-            },
             {
                "booking" : "",
                "budget" : "",
@@ -232,16 +192,6 @@
          "day" : 5,
          "items" : [
             {
-               "booking" : "\u8a02\u7968/\u8a02\u4f4d",
-               "budget" : "",
-               "food" : "\u5fc5\u5403/\u5fc5\u9ede",
-               "map" : "Google Maps",
-               "name" : "\u884c\u7a0b\u5167\u5bb9",
-               "summary" : "\u6d3b\u52d5\u6458\u8981\u8207\u5efa\u8b70",
-               "time" : "\u6642\u9593",
-               "transport" : "\u4ea4\u901a\u8207\u6b65\u884c"
-            },
-            {
                "booking" : "Orsay ticket\uff08\u5efa\u8b70\uff09",
                "budget" : "2A \u2248 \u20ac32\uff1bC(10) \u20ac0*",
                "food" : "",
@@ -288,16 +238,6 @@
       {
          "day" : 6,
          "items" : [
-            {
-               "booking" : "\u8a02\u7968/\u8a02\u4f4d",
-               "budget" : "",
-               "food" : "\u5fc5\u5403/\u5fc5\u9ede",
-               "map" : "Google Maps",
-               "name" : "\u884c\u7a0b\u5167\u5bb9",
-               "summary" : "\u6d3b\u52d5\u6458\u8981\u8207\u5efa\u8b70",
-               "time" : "\u6642\u9593",
-               "transport" : "\u4ea4\u901a\u8207\u6b65\u884c"
-            },
             {
                "booking" : "\u83ab\u5167\u82b1\u5712\u9580\u7968\uff08\u65fa\u5b63\u5efa\u8b70\uff09",
                "budget" : "(Option) 2A \u2248 \u20ac22\u2013\u20ac26\uff1bC(10) \u591a\u6578\u514d\u8cbb/\u512a\u60e0* + \u4ea4\u901a",
