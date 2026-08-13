@@ -22,7 +22,7 @@
     </svg>
   </header>
 
-  <section class="info-strip"><div><span>Mode</span><strong>&#x524D;&#x7AEF;&#x52A0;&#x5BC6;&#x89E3;&#x9396;</strong></div><div><span>Repo</span><strong>Public source, encrypted trip data</strong></div><div><span>Crypto</span><strong>PBKDF2 + AES-CBC</strong></div></section>
+  <section class="info-strip"><div><span>Mode</span><strong>&#x524D;&#x7AEF;&#x52A0;&#x5BC6;&#x89E3;&#x9396;</strong></div><div><span>Repo</span><strong>Public source, encrypted trip data</strong></div><div><span>Crypto</span><strong>PBKDF2 + AES-GCM</strong></div></section>
 
   <main>
     <section id="unlock" class="privacy-note">
@@ -56,7 +56,7 @@
       return crypto.subtle.deriveKey(
         { name: 'PBKDF2', salt: new TextEncoder().encode(salt), iterations, hash: 'SHA-256' },
         baseKey,
-        { name: 'AES-CBC', length: 256 },
+        { name: 'AES-GCM', length: 256 },
         false,
         ['decrypt']
       );
@@ -64,7 +64,12 @@
     async function unlock(password) {
       const data = await fetch('encrypted-data.json?v=20260813-enc1', { cache: 'no-store' }).then(r => r.json());
       const key = await deriveKey(password, data.salt, data.iterations);
-      const plaintext = await crypto.subtle.decrypt({ name: 'AES-CBC', iv: hexToBytes(data.iv) }, key, b64ToBytes(data.ciphertext));
+      const cipher = b64ToBytes(data.ciphertext);
+      const tag = b64ToBytes(data.tag);
+      const combined = new Uint8Array(cipher.length + tag.length);
+      combined.set(cipher);
+      combined.set(tag, cipher.length);
+      const plaintext = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: hexToBytes(data.iv), tagLength: data.tagLength || 128 }, key, combined);
       return JSON.parse(new TextDecoder().decode(plaintext));
     }
     document.querySelector('#unlock-form').addEventListener('submit', async e => {
