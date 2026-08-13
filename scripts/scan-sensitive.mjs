@@ -61,7 +61,7 @@ function scanText(source, text, { publicFile = false, decryptedPayload = false }
       ['private google docs/sheets link', /https:\/\/docs\.google\.com\/[^\s"'<>]+/ig],
       ['booking reference / PNR context', /(?:booking\s*reference|confirmation\s*(?:code|number)|\bPNR\b|訂位代碼|確認碼)[\s\S]{0,80}\b[A-Z0-9]{5,8}\b/ig],
       ['ticket number context', /(?:ticket\s*number|e-?ticket|機票號碼)[\s\S]{0,80}\b\d{10,14}\b/ig],
-      ['passport context', /(?:\bpassport\b|護照)[\s\S]{0,80}\b[A-Z0-9]{6,12}\b/ig],
+      ['passport number context', /(?:passports*(?:no.?|number)|護照號碼)[sS]{0,80}(?=[A-Z0-9]*d)[A-Z0-9]{6,12}/ig],
       ['phone context', /(?:phone|tel|mobile|電話|手機)[\s\S]{0,40}(?:\+?\d[\d\s().-]{8,}\d)/ig],
     ];
     for (const [name, re] of rules) for (const m of text.matchAll(re)) add(source, name, m[0]);
