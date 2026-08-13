@@ -1,62 +1,26 @@
-# 法國巴黎親子自由行｜GitHub Pages 公開版
+# 法國巴黎親子自由行｜GitHub Pages 加密版
 
-這是一個靜態旅遊行程網站，資料來源為 Google Sheet `Travel plan` 的 `france` tab，已整理成公開分享用資料。
+這個 repo 是 public，但行程內容不以明文儲存在 repo 裡。
 
-## 隱私原則
+## 運作方式
 
-此版本只保留：
+- `index.html`：公開的解鎖頁面與版面
+- `style.css`：公開樣式
+- `encrypted-data.json`：加密後的行程內容
 
-- 每日行程摘要
-- 景點名稱
-- 交通建議
-- 訂票提醒類型
-- 預算區間
-- 公開 Google Maps 搜尋連結
+使用者輸入密碼後，瀏覽器會在本機用 WebCrypto 解密內容並顯示每日行程。
 
-不應包含：
+## 注意
 
-- 訂房確認碼
-- 航班 PNR / 訂位代碼
-- 電話、Email
-- 護照、生日
-- 信用卡或付款資訊
-- 完整私人住宿地址
-- 私人 Google Drive / Docs 連結
+- 密碼不可放進 repo。
+- GitHub Pages 本身沒有密碼保護；這是「前端資料加密」方案。
+- 不建議放高度敏感資料，例如護照、信用卡、完整住址。
+- 若忘記密碼，需要用原始資料重新產生 `encrypted-data.json`。
 
-## 本機預覽
+## GitHub Pages
 
-因為頁面會讀取 `itinerary.json`，建議用簡單 HTTP server 預覽：
-
-```bash
-cd france-trip-itinerary
-python3 -m http.server 8000
-```
-
-打開：
+網站：
 
 ```text
-http://localhost:8000
-```
-
-## 發布到 GitHub Pages
-
-```bash
-git init
-git add .
-git commit -m "Initial France itinerary site"
-git branch -M main
-git remote add origin https://github.com/YOUR_ACCOUNT/france-trip-itinerary.git
-git push -u origin main
-```
-
-然後到 GitHub：
-
-```text
-Settings → Pages → Build and deployment → Deploy from a branch → main / root
-```
-
-網站網址會是：
-
-```text
-https://YOUR_ACCOUNT.github.io/france-trip-itinerary/
+https://erwin071.github.io/france-trip-itinerary/
 ```
