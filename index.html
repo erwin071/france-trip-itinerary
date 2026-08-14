@@ -14,7 +14,7 @@
     <div class="hero-inner">
       <p class="eyebrow mono">FRANCE FAMILY ITINERARY</p>
       <h1>&#x6CD5;&#x570B;&#x5DF4;&#x9ECE;&#x89AA;&#x5B50;&#x81EA;&#x7531;&#x884C;</h1>
-      <p class="sub">6 &#x5929;&#x5DF4;&#x9ECE;&#x89AA;&#x5B50;&#x884C;&#x7A0B;&#xFF1A;&#x7D93;&#x5178;&#x5730;&#x6A19;&#x3001;&#x535A;&#x7269;&#x9928;&#x3001;&#x8FD1;&#x90CA;&#x4E00;&#x65E5;&#x904A;&#x8207;&#x884C;&#x524D;&#x91CD;&#x9EDE;&#x6574;&#x7406;&#x3002;</p>
+      <p class="sub">8 &#x5929;&#x5DF4;&#x9ECE;&#x89AA;&#x5B50;&#x884C;&#x7A0B;&#xFF1A;&#x7D93;&#x5178;&#x5730;&#x6A19;&#x3001;&#x535A;&#x7269;&#x9928;&#x3001;&#x8FD1;&#x90CA;&#x4E00;&#x65E5;&#x904A;&#x8207;&#x884C;&#x524D;&#x91CD;&#x9EDE;&#x6574;&#x7406;&#x3002;</p>
       <div class="hero-tags"><span>Paris</span><span>Family Trip</span><span>Museum</span><span class="strong">2026 France</span></div>
     </div>
     <svg class="skyline" viewBox="0 0 920 210" role="img" aria-label="Paris skyline illustration">
@@ -22,7 +22,7 @@
     </svg>
   </header>
 
-  <section class="info-strip"><div><span>Trip Length</span><strong>6 &#x5929;&#x5DF4;&#x9ECE;&#x8207;&#x8FD1;&#x90CA;</strong></div><div><span>Style</span><strong>&#x89AA;&#x5B50;&#x53CB;&#x5584;&#x3001;&#x7D93;&#x5178;&#x5730;&#x6A19;</strong></div><div><span>Highlights</span><strong>&#x9435;&#x5854;&#x3001;&#x7F85;&#x6D6E;&#x5BAE;&#x3001;&#x51E1;&#x723E;&#x8CFD;</strong></div></section>
+  <section class="info-strip"><div><span>Trip Length</span><strong>8 &#x5929;&#x5DF4;&#x9ECE;&#x8207;&#x8FD1;&#x90CA;</strong></div><div><span>Style</span><strong>&#x89AA;&#x5B50;&#x53CB;&#x5584;&#x3001;&#x7D93;&#x5178;&#x5730;&#x6A19;</strong></div><div><span>Highlights</span><strong>&#x9435;&#x5854;&#x3001;&#x7F85;&#x6D6E;&#x5BAE;&#x3001;&#x51E1;&#x723E;&#x8CFD;</strong></div></section>
 
   <main>
     <section id="unlock" class="privacy-note">
@@ -70,7 +70,7 @@
       );
     }
     async function unlock(password) {
-      const data = await fetch('encrypted-data.json?v=20260813-enc1', { cache: 'no-store' }).then(r => r.json());
+      const data = await fetch('encrypted-data.json?v=20260814-paris', { cache: 'no-store' }).then(r => r.json());
       const key = await deriveKey(password, data.salt, data.iterations);
       const cipher = b64ToBytes(data.ciphertext);
       const tag = b64ToBytes(data.tag);
