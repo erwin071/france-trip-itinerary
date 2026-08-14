@@ -98,7 +98,7 @@ ivantrip
 
 ## CI：敏感資訊掃描
 
-每次 push / pull request 都會跑 GitHub Actions：
+每次 push / pull request 都會跑 GitHub Actions；正式 GitHub Pages 部署會等敏感資訊掃描通過後才執行：
 
 ```text
 .github/workflows/sensitive-scan.yml
@@ -125,3 +125,18 @@ Value: 每行一個禁止出現在網站裡的敏感字串，例如 booking refe
 ```
 
 注意：`SENSITIVE_TERMS` 不要 commit 到 repo，請只放 GitHub Secret。
+
+### 部署 gate
+
+GitHub Pages 已改成 GitHub Actions 部署模式，不再直接從 `main / root` 自動發布。
+
+部署流程：
+
+```text
+push to main
+→ scan job 解密並掃描敏感資訊
+→ scan 成功才執行 deploy job
+→ deploy job 只發布 index.html / style.css / encrypted-data.json
+```
+
+如果 scan 失敗，`deploy` job 會被 skipped，網站會停留在上一個成功部署的版本。

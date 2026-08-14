@@ -1,4 +1,4 @@
-name: Sensitive information scan
+name: Sensitive information scan and deploy
 
 on:
   push:
@@ -29,3 +29,35 @@ jobs:
           # Examples: booking reference, ticket number, loyalty number, private address fragment.
           SENSITIVE_TERMS: ${{ secrets.SENSITIVE_TERMS }}
         run: node scripts/scan-sensitive.mjs
+
+  deploy:
+    needs: scan
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p _site
+          cp index.html style.css encrypted-data.json _site/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
