@@ -59,8 +59,9 @@ function scanText(source, text, { publicFile = false, decryptedPayload = false }
     const rules = [
       ['email address', /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/ig],
       ['private google docs/sheets link', /https:\/\/docs\.google\.com\/[^\s"'<>]+/ig],
-      ['booking reference / PNR context', /(?:booking\s*reference|confirmation\s*(?:code|number)|\bPNR\b|訂位代碼|確認碼)[\s\S]{0,80}\b[A-Z0-9]{5,8}\b/ig],
+      ['booking/hotel confirmation context', /(?:booking\s*(?:reference|confirmation|details|number)|confirmation\s*(?:code|number)?|confirm(?:ation)?|reservation\s*(?:number|code)?|order\s*(?:number|id)?|訂位代碼|確認碼|訂單編號|確認編號|\bPNR\b)[\s\S]{0,100}\b[A-Z0-9]{5,14}\b/ig],
       ['ticket number context', /(?:ticket\s*number|e-?ticket|機票號碼)[\s\S]{0,80}\b\d{10,14}\b/ig],
+      ['hotel confirmation alnum', /\b[A-Z0-9]{5,6}UC\d{6,8}\b/ig],
       ['passport number context', /(?:passports*(?:no.?|number)|護照號碼)[sS]{0,80}(?=[A-Z0-9]*d)[A-Z0-9]{6,12}/ig],
       ['phone context', /(?:phone|tel|mobile|電話|手機)[\s\S]{0,40}(?:\+?\d[\d\s().-]{8,}\d)/ig],
     ];
