@@ -86,9 +86,23 @@
       status.textContent = 'Unlocking...';
       try {
         const payload = await unlock(document.querySelector('#password').value);
+        const bookingDeadlineHtml = `
+          <div class="booking-card booking-priority"><span class="mono">必訂｜2027/01–03</span><strong>SNCF / TGV：Paris ↔ Rennes</strong><p>等 SNCF 開票後優先處理。Day 6 前往 Rennes、Day 7 回 Paris 的時間會決定 Mont-Saint-Michel 當天銜接。</p></div>
+          <div class="booking-card booking-priority"><span class="mono">必訂｜2027/01–03</span><strong>Louvre 羅浮宮 timed entry</strong><p>Day 3，2027-04-26。建議 2027/01–02 開始看，最晚 2027/03 訂好。週二休館，這天排週一合理。</p></div>
+          <div class="booking-card booking-priority"><span class="mono">必訂｜2027/01–03</span><strong>Versailles 凡爾賽 timed entry / Passport</strong><p>Day 5，2027-04-28。整天核心行程，建議早場。2027/01–02 開始看，最晚 2027/03 訂好。</p></div>
+          <div class="booking-card booking-priority"><span class="mono">必訂｜TGV 確定後</span><strong>Rennes ↔ Mont-Saint-Michel 接駁 / 小團</strong><p>Day 7，2027-04-30。TGV 時間確定後馬上訂，重點是銜接 Rennes 來回與晚間回巴黎。</p></div>
+          <div class="booking-card booking-priority"><span class="mono">必訂｜2027/03–04</span><strong>Mont-Saint-Michel 修道院門票</strong><p>Day 7，2027-04-30。如果接駁或小團不含票就自行訂；若含票要核對票種與入場時間。</p></div>
+          <div class="booking-card booking-recommended"><span class="mono">建議｜2027/02–03</span><strong>Sainte-Chapelle 聖禮拜堂時段票</strong><p>Day 4，2027-04-27。彩繪玻璃熱門，建議 2027/02–03 訂時段票。</p></div>
+          <div class="booking-card booking-recommended"><span class="mono">建議｜約 60 天前</span><strong>Eiffel Tower 登塔票</strong><p>Day 2，2027-04-25。只有確定要登塔才需要訂；若只是拍照與戰神廣場散步，不用買。</p></div>
+          <div class="booking-card booking-recommended"><span class="mono">建議｜2027/03–04</span><strong>Arc de Triomphe 凱旋門登頂</strong><p>Day 3，2027-04-26。日落前後較理想，建議提前買票避免現場排隊。</p></div>
+          <div class="booking-card booking-recommended"><span class="mono">建議｜2027/03–04</span><strong>Musée d'Orsay 奧賽票</strong><p>Day 6，2027-04-29。週四通常開放，建議先買票省排隊。</p></div>
+          <div class="booking-card booking-recommended"><span class="mono">建議｜2027/03–04</span><strong>Bateaux Mouches 塞納河遊船</strong><p>Day 2，2027-04-25。旺季建議線上買；若要保留天氣彈性，也可出發前再買。</p></div>
+          <div class="booking-card booking-restaurant"><span class="mono">餐廳｜2027/02–04</span><strong>優先餐廳訂位</strong><p>Ore 凡爾賽午餐最早處理，建議 2027/02–03。Brasserie du Louvre、Le Reminet、L Initial、Cafe Caillou、Cafe du Commerce、Annette 建議 2027/03 下旬到 2027/04 上旬補齊。</p></div>
+          <div class="booking-card booking-check"><span class="mono">出發前 1 週</span><strong>最後確認</strong><p>確認餐廳營業時間、5/1 勞動節早餐與午餐備案、TGV 車票、MSM 接駁集合點、博物館開放日與入場時間。</p></div>
+        `;
         document.querySelector('#extra-overview').innerHTML = payload.overviewHtml || '';
         document.querySelector('#timeline').innerHTML = payload.timelineHtml;
-        document.querySelector('#booking-list').innerHTML = payload.bookingHtml;
+        document.querySelector('#booking-list').innerHTML = bookingDeadlineHtml + (payload.bookingHtml || '');
         document.querySelector('#extra-content').innerHTML = payload.extraHtml || '';
         document.querySelector('#overview-section').hidden = false;
         document.querySelector('#itinerary-section').hidden = false;
